@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Shagun-UI/',
+  base: './',
   plugins: [react()],
 })
