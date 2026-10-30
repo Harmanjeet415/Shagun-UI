@@ -1,0 +1,249 @@
+.ms-profile {
+  position: relative;
+  z-index: 80;
+}
+
+.ms-top-actions .ms-profile-trigger {
+  width: auto;
+  height: 46px;
+  padding: 3px 8px 3px 3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(240, 199, 101, 0.42);
+  border-radius: 999px;
+  color: #f4d889;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.04);
+}
+
+.ms-top-actions .ms-profile-trigger:hover,
+.ms-top-actions .ms-profile-trigger[aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(240, 199, 101, 0.75);
+}
+
+.ms-profile-trigger .ms-avatar {
+  width: 38px;
+  height: 38px;
+}
+
+.ms-profile-trigger[aria-expanded="true"] > .icon {
+  transform: rotate(180deg);
+}
+
+.ms-profile-trigger > .icon {
+  transition: transform 0.2s ease;
+}
+
+.ms-profile-menu {
+  position: absolute;
+  top: calc(100% + 13px);
+  right: 0;
+  width: min(310px, calc(100vw - 28px));
+  overflow: hidden;
+  color: var(--ms-ink);
+  border: 1px solid #c99a3d;
+  border-radius: 6px 6px 18px 18px;
+  background: var(--ms-paper);
+  box-shadow:
+    inset 0 0 0 3px var(--ms-paper),
+    inset 0 0 0 4px rgba(213, 168, 77, 0.28),
+    0 24px 60px rgba(52, 14, 47, 0.34);
+  animation: profile-in 0.18s ease-out;
+}
+
+.ms-profile-menu::before {
+  content: "";
+  position: absolute;
+  right: 22px;
+  top: -7px;
+  width: 13px;
+  height: 13px;
+  transform: rotate(45deg);
+  border-left: 1px solid #c99a3d;
+  border-top: 1px solid #c99a3d;
+  background: #4a1644;
+}
+
+.ms-profile-menu > header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 17px;
+  color: #fff8e8;
+  background:
+    radial-gradient(circle at 92% 0, rgba(240, 199, 101, 0.24), transparent 40%),
+    linear-gradient(130deg, #351039, #702754);
+}
+
+.ms-profile-menu > header::after {
+  content: "✦";
+  position: absolute;
+  right: 14px;
+  top: 11px;
+  color: #e8bf61;
+  font-size: 8px;
+}
+
+.ms-profile-large {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 1px solid #edca76;
+  border-radius: 50%;
+  color: #351039;
+  background: linear-gradient(145deg, #f2d27f, #c58b2f);
+  box-shadow: inset 0 0 0 3px rgba(255, 248, 222, 0.32);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.ms-profile-menu > header > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-profile-menu > header strong {
+  font: 600 17px var(--ms-serif);
+}
+
+.ms-profile-menu > header small {
+  overflow: hidden;
+  color: #d8c6d5;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ms-profile-menu > header em {
+  align-self: flex-start;
+  margin-top: 5px;
+  padding: 3px 6px;
+  border: 1px solid rgba(237, 202, 118, 0.35);
+  border-radius: 20px;
+  color: #edca76;
+  font-size: 7px;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ms-profile-event {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 13px 5px;
+  padding: 10px 12px;
+  border: 1px solid #ead9ae;
+  border-radius: 5px 12px 5px 12px;
+  background: #fbf2dc;
+}
+
+.ms-profile-event span {
+  color: #8b7151;
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.ms-profile-event strong {
+  margin-top: 2px;
+  font: 600 13px var(--ms-serif);
+}
+
+.ms-profile-event small {
+  margin-top: 2px;
+  color: #85777f;
+  font-size: 8px;
+}
+
+.ms-profile-menu nav {
+  display: grid;
+  padding: 6px 8px 8px;
+}
+
+.ms-profile-menu nav button {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  padding: 9px;
+  border: 0;
+  border-bottom: 1px solid rgba(213, 168, 77, 0.22);
+  border-radius: 0;
+  color: var(--ms-ink);
+  background: transparent;
+  text-align: left;
+}
+
+.ms-profile-menu nav button:last-child {
+  border-bottom: 0;
+}
+
+.ms-profile-menu nav button:hover,
+.ms-profile-menu nav button:focus-visible {
+  border-radius: 8px;
+  background: #f7ecf3;
+}
+
+.ms-profile-menu nav button > .icon:first-child {
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 50%;
+  color: #6a2459;
+  background: #f1e2ec;
+}
+
+.ms-profile-menu nav button > span {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-profile-menu nav button strong {
+  font: 600 11px var(--ms-serif);
+}
+
+.ms-profile-menu nav button small {
+  overflow: hidden;
+  color: var(--ms-muted);
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ms-profile-menu > footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #eadcc7;
+  color: var(--ms-muted);
+  background: #faf5ed;
+  font-size: 8px;
+}
+
+@keyframes profile-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 350px) {
+  .ms-profile-menu {
+    right: -2px;
+    width: calc(100vw - 20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ms-profile-menu { animation: none; }
+  .ms-profile-trigger > .icon { transition: none; }
+}

@@ -1,0 +1,518 @@
+/* Royal design language: ceremonial framing, palace arches, jaali geometry,
+   crest medallions and antique-gold ornamental details. */
+.ms-top {
+  min-height: 74px;
+  overflow: visible;
+  border-bottom: 1px solid rgba(245, 211, 133, 0.5);
+}
+
+.ms-logo > span {
+  position: relative;
+  color: #f7df9e;
+  border: 1px solid #e6bd5e;
+  box-shadow:
+    inset 0 0 0 3px rgba(245, 211, 133, 0.10),
+    0 0 0 2px rgba(245, 211, 133, 0.10);
+}
+
+.ms-logo > span::before {
+  content: "✦";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f0c765;
+  font: 9px/1 serif;
+}
+
+.ms-logo > span::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(240, 199, 101, 0.38);
+  border-radius: 50%;
+}
+
+.ms-logo strong {
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.ms-view {
+  position: relative;
+  z-index: 1;
+}
+
+.ms-intro {
+  padding: 29px 22px 23px;
+  border: 1px solid #d6aa4f;
+  border-radius: 80px 80px 22px 22px / 42px 42px 22px 22px;
+  box-shadow:
+    inset 0 0 0 3px rgba(245, 211, 133, 0.09),
+    0 17px 40px rgba(70, 20, 62, 0.25);
+}
+
+.ms-intro::before {
+  content: "✦  ◇  ✦";
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  transform: translateX(-50%);
+  color: #e9bf60;
+  font-size: 8px;
+  letter-spacing: 0.5em;
+  white-space: nowrap;
+}
+
+.ms-intro h2 {
+  font-family: var(--ms-serif);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.ms-intro > div > span {
+  font-family: var(--ms-serif);
+  font-size: 9px;
+  letter-spacing: 0.24em;
+}
+
+.ms-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #dcc68f;
+  border-radius: 6px 6px 20px 20px;
+  box-shadow:
+    inset 0 0 0 3px var(--ms-paper),
+    inset 0 0 0 4px rgba(213, 168, 77, 0.20),
+    0 14px 38px rgba(65, 28, 59, 0.10);
+}
+
+.ms-panel::before,
+.ms-panel::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  border-top: 1px solid #d5a84d;
+}
+
+.ms-panel::before {
+  left: 5px;
+  border-left: 1px solid #d5a84d;
+  border-radius: 12px 0 0;
+}
+
+.ms-panel::after {
+  right: 5px;
+  border-right: 1px solid #d5a84d;
+  border-radius: 0 12px 0 0;
+}
+
+.ms-panel > header {
+  min-height: 67px;
+  align-items: center;
+  padding: 15px 20px;
+  background:
+    radial-gradient(circle at 90% 0, rgba(213, 168, 77, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(84, 29, 79, 0.065), transparent);
+}
+
+.ms-panel > header::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d5a84d 18%, #8f294b 50%, #d5a84d 82%, transparent);
+  opacity: 0.55;
+}
+
+.ms-panel > header::before {
+  display: none;
+}
+
+.ms-panel > header > span {
+  width: 32px;
+  height: 32px;
+  clip-path: polygon(50% 0, 63% 24%, 88% 12%, 76% 38%, 100% 50%, 76% 62%, 88% 88%, 63% 76%, 50% 100%, 37% 76%, 12% 88%, 24% 62%, 0 50%, 24% 38%, 12% 12%, 37% 24%);
+  border-radius: 0;
+  font-family: var(--ms-serif);
+  font-size: 9px;
+}
+
+.ms-panel > header h3 {
+  font-family: var(--ms-serif);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+.ms-panel > header p {
+  letter-spacing: 0.02em;
+}
+
+.ms-field > span {
+  font-family: var(--ms-serif);
+  font-size: 10px;
+  letter-spacing: 0.045em;
+}
+
+.ms-field input,
+.ms-field select,
+.ms-field textarea {
+  border-radius: 7px;
+  box-shadow:
+    inset 0 0 0 1px var(--ms-line),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.22);
+}
+
+.ms-field input:focus,
+.ms-field select:focus,
+.ms-field textarea:focus {
+  box-shadow:
+    inset 0 0 0 1px #c69638,
+    0 0 0 3px rgba(213, 168, 77, 0.15);
+}
+
+.ms-primary,
+.ms-gold,
+.ms-secondary {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  font-family: var(--ms-serif);
+  font-size: 12px;
+  letter-spacing: 0.035em;
+}
+
+.ms-primary::before,
+.ms-gold::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(245, 215, 145, 0.28);
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.ms-templates > button {
+  padding: 6px;
+  border: 1px solid #dbc384;
+  border-radius: 5px 5px 12px 12px;
+  box-shadow:
+    inset 0 0 0 3px var(--ms-paper),
+    inset 0 0 0 4px rgba(213, 168, 77, 0.16);
+}
+
+.ms-templates > button.selected {
+  padding: 6px;
+  border-color: #b88120;
+  box-shadow:
+    inset 0 0 0 2px #efd58e,
+    inset 0 0 0 4px #9d6d1f,
+    0 8px 22px rgba(136, 87, 24, 0.18);
+}
+
+.ms-mini {
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(255, 224, 145, 0.4);
+}
+
+.ms-choice > button,
+.ms-toggle,
+.ms-message,
+.ms-upload {
+  border-radius: 8px;
+  border: 1px solid rgba(213, 168, 77, 0.38);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.20);
+}
+
+.ms-guests > div,
+.ms-ledger > div {
+  position: relative;
+  border-bottom-color: rgba(213, 168, 77, 0.28);
+}
+
+.ms-guests > div::after,
+.ms-ledger > div::after {
+  content: "◆";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+  color: #d5a84d;
+  background: var(--ms-paper);
+  padding: 0 5px;
+  font-size: 5px;
+}
+
+.ms-guests > div:last-child::after,
+.ms-ledger > div:last-child::after {
+  display: none;
+}
+
+.ms-guests > div > span:first-child,
+.ms-ledger-avatar {
+  border-radius: 50%;
+  border: 1px solid #d5a84d;
+  box-shadow: inset 0 0 0 2px var(--ms-paper);
+}
+
+.ms-status {
+  border: 1px solid rgba(143, 41, 75, 0.16);
+  border-radius: 4px 12px 4px 12px;
+  font-family: var(--ms-serif);
+  letter-spacing: 0.055em;
+}
+
+.ms-guests > div > .ms-status {
+  border-radius: 4px 12px 4px 12px;
+}
+
+.ms-tabs {
+  padding: 6px 8px 7px;
+  border: 1px solid #bd8f38;
+  border-radius: 6px 6px 20px 20px;
+  box-shadow:
+    inset 0 0 0 3px rgba(245, 211, 133, 0.07),
+    0 18px 48px rgba(46, 12, 42, 0.42);
+}
+
+.ms-tabs button {
+  border-radius: 50% 50% 8px 8px / 16px 16px 8px 8px;
+  font-family: var(--ms-serif);
+  letter-spacing: 0.03em;
+}
+
+.ms-tabs button.active {
+  border-radius: 50% 50% 8px 8px / 20px 20px 8px 8px;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 244, 207, 0.42),
+    0 8px 20px rgba(213, 168, 77, 0.28);
+}
+
+.ms-envelope-stage {
+  padding: 5px;
+  transition: aspect-ratio 0.45s ease;
+}
+
+/* Keep the closed envelope close to the hero; expand only for the opened card. */
+.ms-envelope-stage:not(.opened) {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+}
+
+.ms-envelope-stage:not(.opened) .ms-envelope-back,
+.ms-envelope-stage:not(.opened) .ms-envelope-front {
+  top: 26%;
+  height: 74%;
+}
+
+.ms-envelope-stage:not(.opened) .ms-envelope-flap {
+  top: 26%;
+  height: 42%;
+}
+
+.ms-envelope-stage:not(.opened) .ms-seal {
+  top: 56%;
+}
+
+.ms-card {
+  border: 1px solid #dfb957;
+  border-radius: 2px;
+  box-shadow:
+    inset 0 0 0 4px rgba(246, 216, 145, 0.10),
+    0 22px 55px rgba(54, 17, 47, 0.34);
+}
+
+.ms-rsvp button {
+  border: 1px solid #ddca9a;
+  border-radius: 5px 15px 5px 15px;
+  font-family: var(--ms-serif);
+}
+
+.ms-rsvp button.active {
+  border: 1px solid #b78425;
+  box-shadow:
+    inset 0 0 0 2px #fff7df,
+    inset 0 0 0 4px #d5a84d;
+}
+
+.ms-total {
+  border: 1px solid #9e6a1d;
+  border-radius: 60px 60px 12px 12px / 34px 34px 12px 12px;
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 246, 215, 0.28),
+    0 15px 36px rgba(123, 76, 20, 0.20);
+}
+
+.ms-total::after {
+  content: "✦  ◇  ✦";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: rgba(74, 35, 47, 0.55);
+  font-size: 7px;
+  letter-spacing: 0.35em;
+}
+
+/* Large, non-repeating palace arch watermark behind the workspace. */
+.ms-app {
+  position: relative;
+  isolation: isolate;
+}
+
+.ms-app::before {
+  content: "";
+  position: absolute;
+  top: 138px;
+  left: 50%;
+  width: min(430px, calc(100% - 26px));
+  height: 310px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.5;
+  background:
+    radial-gradient(ellipse 58% 88% at 50% 100%, transparent 68%, rgba(181, 132, 42, 0.16) 68.4%, rgba(181, 132, 42, 0.16) 69%, transparent 69.4%),
+    radial-gradient(ellipse 68% 98% at 50% 100%, transparent 70%, rgba(84, 29, 79, 0.08) 70.4%, rgba(84, 29, 79, 0.08) 71%, transparent 71.4%);
+  z-index: 0;
+}
+
+/* A restrained mandala seal in each card body, kept behind its content. */
+.ms-panel > div {
+  position: relative;
+  isolation: isolate;
+}
+
+.ms-panel > div::before {
+  content: "";
+  position: absolute;
+  right: -38px;
+  bottom: -38px;
+  width: 112px;
+  height: 112px;
+  border: 1px solid rgba(213, 168, 77, 0.16);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px rgba(213, 168, 77, 0.045),
+    0 0 0 19px rgba(84, 29, 79, 0.025),
+    inset 0 0 0 12px rgba(213, 168, 77, 0.025);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ms-panel > div::after {
+  content: "❦";
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+  color: rgba(156, 107, 31, 0.24);
+  font: 18px/1 Georgia, serif;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Arched inner frames make invitation previews feel engraved, not tiled. */
+.ms-mini::after {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  border: 1px solid currentColor;
+  border-radius: 50% 50% 3px 3px / 28% 28% 3px 3px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.ms-card-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.32;
+  background:
+    radial-gradient(circle at 0 0, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px),
+    radial-gradient(circle at 100% 0, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px),
+    radial-gradient(circle at 0 100%, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px),
+    radial-gradient(circle at 100% 100%, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px);
+  pointer-events: none;
+}
+
+/* Original Mughal-inspired jaali lattice, contained inside architectural panels. */
+.ms-intro {
+  height: 234px;
+  overflow: hidden;
+}
+
+.ms-intro > div {
+  width: calc(100% - 138px);
+  max-width: calc(100% - 138px);
+}
+
+.ms-intro::after {
+  top: auto;
+  right: 12px;
+  bottom: 0;
+  width: 118px;
+  height: min(152px, calc(100% - 30px));
+  border: 0;
+  border-radius: 0;
+  background: url("./assets/mughal-jaali-arch.svg") center bottom / 100% 100% no-repeat;
+  box-shadow: none;
+  opacity: 0.8;
+  filter: brightness(1.22) contrast(1.18) drop-shadow(0 0 1px rgba(255, 225, 145, 0.72));
+}
+
+.ms-panel > header::before {
+  display: block;
+  left: auto;
+  right: 10px;
+  top: 5px;
+  bottom: auto;
+  width: 56px;
+  height: 64px;
+  border-radius: 0;
+  background: url("./assets/mughal-jaali-arch.svg") center top / contain no-repeat;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.ms-mini::after {
+  inset: 8px;
+  border: 0;
+  border-radius: 0;
+  background: url("./assets/mughal-jaali-arch.svg") center / 86% 96% no-repeat;
+  opacity: 0.44;
+}
+
+.ms-mini > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ms-card-pattern {
+  opacity: 0.46;
+  background:
+    url("./assets/mughal-jaali-arch.svg") center / 78% 90% no-repeat,
+    radial-gradient(circle at 0 0, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px),
+    radial-gradient(circle at 100% 0, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px),
+    radial-gradient(circle at 0 100%, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px),
+    radial-gradient(circle at 100% 100%, transparent 52px, currentColor 53px, currentColor 54px, transparent 55px);
+}
+
+@media (max-width: 360px) {
+  .ms-intro {
+    height: 250px;
+    padding: 27px 17px 20px;
+    border-radius: 64px 64px 18px 18px / 34px 34px 18px 18px;
+  }
+
+  .ms-panel > header {
+    padding-inline: 16px;
+  }
+
+  .ms-tabs button {
+    font-size: 7px;
+  }
+}

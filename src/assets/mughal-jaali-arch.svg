@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 260" fill="none">
+  <defs>
+    <pattern id="jaali" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M14 1 17.5 8.2 27 4.2 20.2 11 27 14l-6.8 3 6.8 6.8-9.5-4L14 27l-3.5-7.2-9.5 4L7.8 17 1 14l6.8-3L1 4.2l9.5 4L14 1Z" stroke="#F2CC70" stroke-width="1.25" stroke-linejoin="round" opacity=".96"/>
+      <circle cx="14" cy="14" r="3.8" stroke="#F2CC70" stroke-width="1.15" opacity=".9"/>
+      <path d="M0 0 8.2 8.2M28 0l-8.2 8.2M0 28l8.2-8.2M28 28l-8.2-8.2" stroke="#F2CC70" stroke-width="1" opacity=".72"/>
+    </pattern>
+    <clipPath id="arch">
+      <path d="M13 251V106C13 64 47 32 90 7c43 25 77 57 77 99v145H13Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#arch)">
+    <rect x="9" y="5" width="162" height="250" fill="url(#jaali)"/>
+  </g>
+  <path d="M13 251V106C13 64 47 32 90 7c43 25 77 57 77 99v145" stroke="#F2CC70" stroke-width="2.4" opacity="1"/>
+  <path d="M25 251V109c0-34 28-61 65-82 37 21 65 48 65 82v142" stroke="#F2CC70" stroke-width="1.25" opacity=".78"/>
+  <path d="M7 251h166M18 242h144" stroke="#F2CC70" stroke-width="1.2" opacity=".9"/>
+  <path d="m90 1 5 6-5 6-5-6 5-6Z" fill="#F2CC70" opacity=".95"/>
+</svg>

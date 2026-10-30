@@ -1,0 +1,211 @@
+/* Strict phone-first application shell. Wider screens show the same mobile
+   experience centered instead of switching to a desktop dashboard. */
+.ms-page {
+  display: block;
+  min-height: 100vh;
+  padding: 0;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(211, 155, 49, 0.10), transparent 28rem),
+    var(--ms-bg);
+}
+
+.ms-rail {
+  display: none !important;
+}
+
+.ms-app {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--ms-bg);
+  border-inline: 1px solid var(--ms-line);
+  box-shadow: 0 0 70px rgba(24, 48, 44, 0.09);
+}
+
+.ms-top {
+  height: 66px;
+  padding: 0 14px;
+}
+
+.ms-mobile-logo {
+  display: block;
+}
+
+.ms-mobile-logo .ms-logo > span {
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+}
+
+.ms-mobile-logo .ms-logo strong {
+  font-size: 20px;
+}
+
+.ms-mobile-logo .ms-logo small,
+.ms-event-select {
+  display: none;
+}
+
+.ms-tabs {
+  position: sticky;
+  top: 74px;
+  z-index: 15;
+  width: auto;
+  margin: 10px 14px 0;
+  border-radius: 12px;
+}
+
+.ms-tabs button {
+  min-width: 0;
+  padding: 10px 3px;
+  gap: 4px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.ms-tabs button .icon {
+  display: none;
+}
+
+.ms-view {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 25px 14px 45px;
+}
+
+.ms-stack {
+  gap: 14px;
+}
+
+.ms-intro {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ms-intro h2 {
+  font-size: clamp(30px, 9vw, 38px);
+}
+
+.ms-intro p {
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.ms-intro > em {
+  font-size: 7px;
+  padding: 6px 8px;
+}
+
+.ms-panel {
+  border-radius: 15px;
+}
+
+.ms-panel > header {
+  padding: 15px 16px;
+}
+
+.ms-panel > div {
+  padding: 16px;
+}
+
+.ms-form.two,
+.guest-row,
+.cash-row {
+  grid-template-columns: 1fr;
+}
+
+.ms-field.wide,
+.guest-row .ms-field:first-child {
+  grid-column: auto;
+}
+
+.guest-row .ms-primary,
+.cash-row .ms-primary {
+  width: 100%;
+}
+
+.ms-templates {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  padding: 1px 1px 8px;
+}
+
+.ms-templates > button {
+  width: 126px;
+  min-width: 126px;
+  scroll-snap-align: start;
+}
+
+.ms-mini {
+  height: 155px;
+}
+
+.ms-envelope-stage {
+  width: 100%;
+  max-width: 410px;
+}
+
+.ms-rsvp {
+  gap: 5px;
+}
+
+.ms-choice,
+.ms-actions {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ms-toast {
+  width: max-content;
+  max-width: calc(100% - 28px);
+  bottom: 16px;
+  text-align: center;
+}
+
+@media (max-width: 380px) {
+  .ms-top-actions button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ms-tabs button {
+    font-size: 8px;
+  }
+
+  .ms-intro > em {
+    display: none;
+  }
+
+  .ms-choice,
+  .ms-actions,
+  .ms-rsvp {
+    grid-template-columns: 1fr;
+  }
+
+  .ms-envelope-stage {
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 481px) {
+  .ms-app {
+    margin-block: 20px;
+    min-height: calc(100vh - 40px);
+    border: 1px solid var(--ms-line);
+    border-radius: 22px;
+    overflow: clip;
+  }
+
+  .ms-top {
+    top: 0;
+  }
+
+  .ms-tabs {
+    top: 76px;
+  }
+}
